@@ -1,0 +1,70 @@
+ h1.blocktext {
+    text-align: center;
+    color: #71085C;
+    font-weight: bold;
+}
+
+p.blocktext {
+    text-align: center;
+    line-height: 3em;
+    color: #71085C;
+    font-size: 15pt;
+}
+
+img.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.Container {
+  position: relative;
+}
+
+.img {
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.Container:hover .image {
+  opacity: 0.3;
+}
+
+.Container:hover .middle {
+  opacity: 1;
+}
+
+.text-block {
+  background-color: hsla(0, 0%, 50%, 0.3);
+  border: 1px solid pink;
+  color: #FDF2FB;
+  font-style: bold;
+  font-family: Helvetica;
+  font-size: 20px;
+  padding: 16px 32px;
+  position: relative;
+}
+
+.p2 {
+  text-align: center;
+  font-family: Helvetica;
+  line-height: 12em;
+  color: #71085C;
+  font-size: 15pt;
+  position: sticky;
+}
