@@ -53,10 +53,10 @@ def myTweetMethod():
    return bigSister_tweets[:3]
 
 
-@app.route("/tweet”")
+@app.route("/tweet")
 def hellostranger4():
    myTweets = myTweetMethod()
-   return render_template(Page3.html”, tweets = myTweets)
+   return render_template("Page3.html", tweets = myTweets)
 
 if __name__ == '__main__':
     app.run(debug=True)
