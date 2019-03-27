@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<title>My Flask Form</title>
+</head>
+<body>
+
+	<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #5777F0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+body {
+	background-color: #4CAF50;
+}
+
+input[type=submit]:hover {
+  background-color: #2150FF;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+ 
+
+<div id="contact-form">
+	<h1>Let's keep in touch </h1>
+  <form action="/p">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your first name">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name">
+
+    <label for="email">Email Address</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your email address">
+
+    <label for="country">What School Are You In?</label>
+    <select id="school" name="school">
+      <option value="arts">Arts/Humanities</option>
+      <option value="cs">Computer Science</option>
+      <option value="war">War Studies</option>
+      <option value="physics">Physics</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="country">Are You Part Of Any Societies?</label>
+    <select id="school" name="school">
+      <option value="football">Football</option>
+      <option value="arts">Arts</option>
+      <option value="jump">High Jump</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="email">What's Your Favourite Place About Kings?</label>
+    <input type="text" id="lname" name="lastname" placeholder="Enter Text Here">
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+
+</body>
+</html>
