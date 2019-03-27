@@ -1,6 +1,7 @@
 
 from flask import Flask, render_template, request
 import requests
+import tweepy
 
 app = Flask("MyApp")
 
@@ -36,6 +37,26 @@ def sign_up():
     print(form_data["email"])
     send_simple_message(form_data["email"])
     return "All OK"
+
+
+def myTweetMethod():
+   #twitter apps
+   auth=tweepy.OAuthHandler(“Zi0zR6Y3kw2ly98wE7majMb55”,“9bA2086tHojvAUQL4EzMhMPnv3Wr4Lsnc6LbjyR8KaJY7btphB”)
+   auth.set_access_token(“1011888746009067520-CEER93u9rCyHTe3Vu5BOiu13g7pXiT”,“sZU3fium2Lk9xS13T50uW0psFOxb97KuvyHqwnGuTYKoN”)
+
+   twitter_api=tweepy.API(auth)
+
+   bigSister_tweets=twitter_api.search(
+   q="BigSister"
+   )
+   
+   return bigSister_tweets[:3]
+
+
+@app.route("/tweet”")
+def hellostranger4():
+   myTweets = myTweetMethod()
+   return render_template(Page3.html”, tweets = myTweets)
 
 if __name__ == '__main__':
     app.run(debug=True)
